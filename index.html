@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>টাকা আয় করুন - বিজ্ঞাপন দেখুন</title>
     <!-- Monetag SDK -->
-    <script src='//libtl.com/sdk.js' data-zone='10182944' data-sdk='show_10182944'></script>
+    <script src='//libtl.com/sdk.js' data-zone='10197905' data-sdk='show_10197905'></script>
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -862,7 +862,7 @@
 
         // Check if Monetag ad is ready (CORRECTED FUNCTION NAME)
         function checkAdReady() {
-            if (typeof window.show_10182944 !== 'function') { // Corrected: use 10182944
+            if (typeof window.show_10197905 !== 'function') { // Corrected: use 10197905
                 document.getElementById('ad-status').innerHTML = '<i class="fas fa-spinner fa-spin"></i> বিজ্ঞাপন সিস্টেম লোড হচ্ছে...';
                 setTimeout(checkAdReady, 1000);
             } else {
@@ -975,7 +975,7 @@
             
             try {
                 // Show the ad - Corrected: Call the actual SDK function from your HTML
-                window.show_10182944().then(() => {
+                window.show_10197905().then(() => {
                     // Ad watched successfully
                     watchedAdsCount++;
                     earnedPoints += POINTS_PER_AD;
@@ -1094,7 +1094,7 @@
             document.getElementById('stop-auto-btn-earn').disabled = true;
             
             // Only re-enable watch ad button if ad system is ready and daily limit not reached
-            if (typeof window.show_10182944 === 'function' && dailyAdsWatched < MAX_ADS_PER_DAY) {
+            if (typeof window.show_10197905 === 'function' && dailyAdsWatched < MAX_ADS_PER_DAY) {
                 document.getElementById('watch-ad-btn').disabled = false;
                 document.getElementById('watch-ad-btn-earn').disabled = false;
             } else if (dailyAdsWatched >= MAX_ADS_PER_DAY) {
@@ -1258,4 +1258,5 @@
     </script>
 </body>
 </html>
+
 
